@@ -115,22 +115,22 @@
       justify-content: center;
       margin: auto;
     }
+    .downControls{
+      display: flex;
+      justify-content: center;
+    }
+    .downControls img{
+      width: 150px;
+      margin: 20px;
+    }
     .upControls{
+      width: 500px;
       display: flex;
       justify-content: center;
     }
     .upControls img{
       width: 100px;
-      margin: 10px;
-    }
-    .downControls{
-      width: 500px;
-      display: flex;
-      justify-content: center;
-    }
-    .downControls img{
-      width: 100px;
-      margin: 10px;
+      margin: 20px;
       display: flex;
       justify-content: center;
     }
