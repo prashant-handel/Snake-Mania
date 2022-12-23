@@ -34,8 +34,8 @@
     display: grid;
     grid-template-columns: repeat(16, minmax(0, 1fr));
     grid-template-rows: repeat(16, minmax(0, 1fr));
-    height: 80vmin;
-    width: 80vmin;
+    height: 85vmin;
+    width: 85vmin;
 }
 .snake{
     background-color: green;
