@@ -213,18 +213,26 @@ function playFunction(){
 // Controlling gamee using image buttons
 
     leftImgEl.addEventListener("click",()=>{
+        if (inputDirection.x != 1){
         moveMusic.play();
         moveLeft();
+        }
     })
     rightImgEl.addEventListener("click",()=>{
+        if (inputDirection.x != -1){
         moveMusic.play();
         moveRight();
+        }
     })
     downImgEl.addEventListener("click",()=>{
+        if (inputDirection.y != -1){
         moveMusic.play();
         moveDown();
+        }
     })
     upImgEl.addEventListener("click",()=>{
+        if (inputDirection.y != 1){
         moveMusic.play();
         moveUp();
+        }
     })
