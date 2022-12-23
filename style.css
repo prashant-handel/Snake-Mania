@@ -45,14 +45,14 @@
 }
 
 .head{
-    background: url(snake.png);
+    background: url(/images/snake.png);
     background-size: cover;
     background-repeat: no-repeat;
     border: none;
 }
 
 .apple{
-    background: url(apple.png);
+    background: url(/images/apple.png);
     background-size: cover;
     background-repeat: no-repeat;
 }

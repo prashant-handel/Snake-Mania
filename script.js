@@ -12,10 +12,10 @@ const gameoverImg = document.querySelector(".gameover");
 let isPaused = false;
 let playBtn = document.getElementById("play");
 let isGameOver =false;
-const foodMusic = new Audio('food.mp3');
-const gameOverMusic = new Audio('gameover.mp3');
-const moveMusic = new Audio('move.mp3');
-const music = new Audio('music.mp3');
+const foodMusic = new Audio('/audio/food.mp3');
+const gameOverMusic = new Audio('/audio/gameover.mp3');
+const moveMusic = new Audio('/audio/move.mp3');
+const music = new Audio('/audio/music.mp3');
 const musicOnBtn = document.getElementById("musicOnBtn");
 const musicOffBtn = document.getElementById("musicOffBtn");
 
