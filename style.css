@@ -140,4 +140,12 @@
         scale: 200%;
         margin-top: 50px;
     }
+    .gameBoard{
+        background: linear-gradient(orange, rgb(207, 207, 48));
+        display: grid;
+        grid-template-columns: repeat(16, minmax(0, 1fr));
+        grid-template-rows: repeat(16, minmax(0, 1fr));
+        height: 95vmin;
+        width: 95vmin;
+    }
   }
