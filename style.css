@@ -119,7 +119,7 @@
       justify-content: center;
     }
     .downControls img{
-      width: 150px;
+      width: 200px;
       margin: 50px;
     }
     .upControls{
@@ -128,7 +128,7 @@
       justify-content: center;
     }
     .upControls img{
-      width: 150px;
+      width: 200px;
       margin: 50px;
       display: flex;
       justify-content: center;
