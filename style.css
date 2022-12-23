@@ -129,9 +129,12 @@
       justify-content: center;
     }
     .upControls img{
-      width: 100px;
+      width: 150px;
       margin: 20px;
       display: flex;
       justify-content: center;
+    }
+    .leftImg, .rightImg, .upImg, .downImg{
+        border: none;
     }
   }
