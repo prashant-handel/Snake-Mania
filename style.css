@@ -137,4 +137,7 @@
     .leftImg, .rightImg, .upImg, .downImg{
         border: none;
     }
+    .header{
+        scale: 200%;
+    }
   }
