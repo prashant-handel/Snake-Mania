@@ -19,6 +19,12 @@ const music = new Audio('music.mp3');
 const musicOnBtn = document.getElementById("musicOnBtn");
 const musicOffBtn = document.getElementById("musicOffBtn");
 
+// Accessing touch controls for mobiles and tableets
+const leftImgEl = document.getElementById("leftImg");
+const rightImgEl = document.getElementById("rightImg");
+const upImgEl = document.getElementById("upImg");
+const downImgEl = document.getElementById("downImg");
+
 // Game Function
 function main(ctime){
     if(!isPaused){
@@ -108,7 +114,7 @@ function moveRight(){
 function control(e) {
     if (timer) {
       if (e.keyCode === 37 && inputDirection.x != 1) {
-          moveMusic.play();
+        moveMusic.play();
         moveLeft();
     } else if (e.keyCode === 38 && inputDirection.y != 1) {
         moveMusic.play();
@@ -203,3 +209,22 @@ function playFunction(){
         window.requestAnimationFrame(main);
     }
 }
+
+// Controlling gamee using image buttons
+
+    leftImgEl.addEventListener("click",()=>{
+        moveMusic.play();
+        moveLeft();
+    })
+    rightImgEl.addEventListener("click",()=>{
+        moveMusic.play();
+        moveRight();
+    })
+    downImgEl.addEventListener("click",()=>{
+        moveMusic.play();
+        moveDown();
+    })
+    upImgEl.addEventListener("click",()=>{
+        moveMusic.play();
+        moveUp();
+    })
