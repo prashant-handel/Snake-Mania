@@ -120,7 +120,7 @@
     }
     .downControls img{
       width: 150px;
-      margin: 20px;
+      margin: 50px;
     }
     .upControls{
       width: 500px;
@@ -129,7 +129,7 @@
     }
     .upControls img{
       width: 150px;
-      margin: 20px;
+      margin: 50px;
       display: flex;
       justify-content: center;
     }
