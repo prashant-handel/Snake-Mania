@@ -103,3 +103,38 @@
 .gameover img{
     width: 40vw;
 }
+
+.imgControls{
+    display: none;
+  }
+
+  @media only screen and (max-width: 1024px){
+    .container {
+      height: 40vh;
+    }
+    .imgControls{
+      display: block;
+      width: 500px;
+      justify-content: center;
+      margin: auto;
+    }
+    .upControls{
+      display: flex;
+      justify-content: center;
+    }
+    .upControls img{
+      width: 100px;
+      margin: 10px;
+    }
+    .downControls{
+      width: 500px;
+      display: flex;
+      justify-content: center;
+    }
+    .downControls img{
+      width: 100px;
+      margin: 10px;
+      display: flex;
+      justify-content: center;
+    }
+  }

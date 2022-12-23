@@ -22,9 +22,9 @@ const musicOffBtn = document.getElementById("musicOffBtn");
 // Game Function
 function main(ctime){
     if(!isPaused){
-    window.requestAnimationFrame(main);
-    if(((ctime - lastPaintTime)/1000) < 1/speed){
-    return;
+        window.requestAnimationFrame(main);
+        if(((ctime - lastPaintTime)/1000) < 1/speed){
+            return;
     }
     lastPaintTime = ctime;
     update();
@@ -49,6 +49,7 @@ function drawSnake(){
         let snakeElement = document.createElement("div");
         snakeElement.style.gridColumnStart = element.x;
         snakeElement.style.gridRowStart = element.y;
+        snakeElement.style.transform = "rotate(0deg)";
         if(index == 0){
             snakeElement.classList.add('head');
         }
@@ -56,7 +57,17 @@ function drawSnake(){
             snakeElement.classList.add('snake');
         }
         gameBoardEl.appendChild(snakeElement);
-    })
+        
+        if(inputDirection.x == 1){
+                snakeElement.style.transform = "rotate(-90deg)";
+            }
+        else if(inputDirection.x == -1){
+                snakeElement.style.transform = "rotate(90deg)";
+            }
+        else if(inputDirection.y == -1){
+                snakeElement.style.transform = "rotate(180deg)";
+            }
+        })
 }
 
 // Updating snake according to movement 
@@ -97,17 +108,21 @@ function moveRight(){
 function control(e) {
     if (timer) {
       if (e.keyCode === 37 && inputDirection.x != 1) {
+          moveMusic.play();
         moveLeft();
-        moveMusic.play();
     } else if (e.keyCode === 38 && inputDirection.y != 1) {
+        moveMusic.play();
         moveUp();
-        moveMusic.play();
     } else if (e.keyCode === 39 && inputDirection.x != -1) {
+        moveMusic.play();
         moveRight();
-        moveMusic.play();
     } else if (e.keyCode === 40 && inputDirection.y != -1) {
-        moveDown();
         moveMusic.play();
+        moveDown();
+      } 
+      // pause and play using space key
+      else if (e.keyCode === 32) {
+        playFunction();
       }
     }
   }
@@ -168,7 +183,9 @@ function gameover(){
 }
 
 // Add functionality to paly/ pause button
-playBtn.addEventListener("click",()=>{
+playBtn.addEventListener("click", playFunction);
+
+function playFunction(){
     if(isGameOver){
         window.requestAnimationFrame(main);
         location.reload(true);
@@ -185,4 +202,4 @@ playBtn.addEventListener("click",()=>{
         isPaused = false;
         window.requestAnimationFrame(main);
     }
-})
+}
