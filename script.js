@@ -200,13 +200,12 @@ function playFunction(){
         snakeBody = [{x: 4, y: 5}];
     }
     else if(!isPaused){
-        timer = true;
         isPaused = true;
     }
     else if(isPaused){
-        timer = false;
         isPaused = false;
         window.requestAnimationFrame(main);
+        update();
     }
 }
 
